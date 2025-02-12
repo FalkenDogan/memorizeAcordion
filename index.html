@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="pics/logo.png" type="image/png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+/*
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+      */
+    .accordion-header {
+      font-size: 1.5em;
+      color: #333;
+      background-color: #f0f0f0;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: #ddd;
+    }
+
+    .accordion-content {
+      padding: 15px;
+      border-top: 1px solid #ddd;
+      display: none;
+    }
+
+    .accordion-content button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      font-size: 1em;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-content button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Deutsch Lernen Bölümü -->
+    <button class="accordion-header">Deutsch Lernen</button>
+    <div class="accordion-content" id="deutsch-lernen">
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1jluqCaMbfK5JxGjT8w8XKqsvdUgy2vNI7GFwot7jnqg/edit?gid=1917887240#gid=1917887240">Miss Day and Night 1</button>
+      <button id="generate-json"data-link="https://docs.google.com/spreadsheets/d/1jluqCaMbfK5JxGjT8w8XKqsvdUgy2vNI7GFwot7jnqg/edit?gid=1642463596#gid=1642463596">Miss Day and Night 2</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1jluqCaMbfK5JxGjT8w8XKqsvdUgy2vNI7GFwot7jnqg/edit?gid=1379391506#gid=1379391506">Miss Day and Night 3</button>
+      <button  id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1jluqCaMbfK5JxGjT8w8XKqsvdUgy2vNI7GFwot7jnqg/edit?gid=1379391506#gid=1379391506">Miss Day and Night 3</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1jluqCaMbfK5JxGjT8w8XKqsvdUgy2vNI7GFwot7jnqg/edit?gid=1286453777#gid=1286453777">Miss Day and Night 4</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1kiKWxExaaF74gbqRYdWrwexbDC_TZ-kOWjVLLuvcIlc/edit?gid=1901053947#gid=1901053947">Insta Hochdeutschhochturkce</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1kiKWxExaaF74gbqRYdWrwexbDC_TZ-kOWjVLLuvcIlc/edit?gid=1720778446#gid=1720778446">Insta Micheda</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1rVZ7lyUQVjZj-b1Te4MQq9Zho9YGJRT3R_P03KpcaVg/edit?gid=0#gid=0">Womit Damit</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1Twu49Yf3sGDwB6h3nE62LwdgYR_L7oAfcxLPAKYNBbk/edit?gid=465055500#gid=465055500">Günlük Duyduklarım</button>
+    </div>
+
+      <button class="accordion-header">Verben Gruppe</button>
+      <div class="accordion-content" id="deutsch-lernen">
+        <button id="generate-json"data-link="https://docs.google.com/spreadsheets/d/1kgq4o030nC2Zdi16KMjCkMNVDhnKTILyaSPGFdlWrxw/edit?gid=1486663862#gid=1486663862">Führen</button>
+        <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1kgq4o030nC2Zdi16KMjCkMNVDhnKTILyaSPGFdlWrxw/edit?gid=835149936#gid=835149936">Gehen</button>
+        <button id="generate-json"data-link="https://docs.google.com/spreadsheets/d/1kgq4o030nC2Zdi16KMjCkMNVDhnKTILyaSPGFdlWrxw/edit?gid=1660008158#gid=1660008158">Halten</button>
+        <button id="generate-json"data-link="https://docs.google.com/spreadsheets/d/1kgq4o030nC2Zdi16KMjCkMNVDhnKTILyaSPGFdlWrxw/edit?gid=999615350#gid=999615350">Holen</button>
+        <button id="generate-json"data-link="https://docs.google.com/spreadsheets/d/1kgq4o030nC2Zdi16KMjCkMNVDhnKTILyaSPGFdlWrxw/edit?gid=0#gid=0">Setzen</button>
+        <button id="generate-json"data-link="https://docs.google.com/spreadsheets/d/1kgq4o030nC2Zdi16KMjCkMNVDhnKTILyaSPGFdlWrxw/edit?gid=1415452522#gid=1415452522">Teilen</button>
+      </div>
+    <!-- IHK Vorbereitung Bölümü -->
+    <button class="accordion-header">IHK Vorbereitung</button>
+    <div class="accordion-content" id="ihk-vorbereitung">
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1gPIRYrbfPxcgd-HZw_lEaCqhY9rfKzqRlRbGndEZDac/edit?gid=0#gid=0">IPv4</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1gPIRYrbfPxcgd-HZw_lEaCqhY9rfKzqRlRbGndEZDac/edit?gid=1191674173#gid=1191674173">IT Abkürzung</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1gPIRYrbfPxcgd-HZw_lEaCqhY9rfKzqRlRbGndEZDac/edit?gid=314203259#gid=314203259">IHK Frage Karten</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1Twu49Yf3sGDwB6h3nE62LwdgYR_L7oAfcxLPAKYNBbk/edit?gid=0#gid=0">IT Begriffe</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1gPIRYrbfPxcgd-HZw_lEaCqhY9rfKzqRlRbGndEZDac/edit?gid=322864749#gid=322864749">Portnummer</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1gPIRYrbfPxcgd-HZw_lEaCqhY9rfKzqRlRbGndEZDac/edit?gid=741719978#gid=741719978">IPv6</button>
+      <button id="generate-json" data-link="https://docs.google.com/spreadsheets/d/1gPIRYrbfPxcgd-HZw_lEaCqhY9rfKzqRlRbGndEZDac/edit?gid=971395649#gid=971395649">Code Fragen</button>
+    </div>
+
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const headers = document.querySelectorAll('.accordion-header');
+      headers.forEach(header => {
+        header.addEventListener('click', function () {
+          const currentContent = this.nextElementSibling;
+
+          // Close all other contents
+          document.querySelectorAll('.accordion-content').forEach(content => {
+            if (content !== currentContent) {
+              content.style.display = 'none';
+            }
+          });
+
+          // Toggle current content
+          if (currentContent.style.display === 'block') {
+            currentContent.style.display = 'none';
+          } else {
+            currentContent.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+  <script src="index_sheetToJson.js"></script>
+</body>
+
+</html>
